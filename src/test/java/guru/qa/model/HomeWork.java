@@ -54,7 +54,7 @@ public class HomeWork {
     @Test
     void json()throws Exception {
         ObjectMapper mapper = new ObjectMapper();
-        InputStream is = Test.class.getResourceAsStream("folder/sample3.json");
+        InputStream is = Test.class.getResourceAsStream("older/sample3.json");
 
     }
 }
