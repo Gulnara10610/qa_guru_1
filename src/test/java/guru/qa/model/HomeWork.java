@@ -49,14 +49,17 @@ public class HomeWork {
 
     @Test
     void zipPdf() throws Exception {
-        InputStream is = cl.getResourceAsStream("folder/Памятка АИШ 2021-2022.zip");
+        InputStream is = cl.getResourceAsStream("folder/PDF_829613669_10.2022_15.19.43.zip");
         ZipInputStream zis = new ZipInputStream(is);
         ZipEntry entry;
         while ((entry = zis.getNextEntry()) != null) {
             String namePdf = entry.getName();
-            System.out.println(namePdf);
+            long size = entry.getSize();
+            assertThat(entry.getName()).isEqualTo("PDF_829613669_10.2022_15.19.43.pdf");
+            System.out.println(entry.getName());
         }
     }
+
 }
 
 
