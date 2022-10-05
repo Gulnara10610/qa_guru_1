@@ -1,9 +1,10 @@
 package guru.qa.model;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import guru.qa.FileParseTest;
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
@@ -12,8 +13,6 @@ import static com.codeborne.selenide.Selenide.open;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.InputStream;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class HomeWork {
     ClassLoader cl = FileParseTest.class.getClassLoader();
@@ -60,13 +59,8 @@ public class HomeWork {
         }
     }
 
+
 }
 
 
-//@Test
-//void json()throws Exception {
-// ObjectMapper mapper = new ObjectMapper();
-//InputStream is = Test.class.getResourceAsStream("folder/sample3.json");
-//System.out.println(is);
-// }
 
